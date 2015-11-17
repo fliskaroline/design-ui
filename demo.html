@@ -1,0 +1,510 @@
+
+<html>
+<head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        
+        
+        <meta name="robots" content="noindex, nofollow" />
+        
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="https://www.rideways.com/css/component-20151112.1849.css" rel="stylesheet" type="text/css" />
+        <link href="https://www.rideways.com/css/print-20151112.1849.css" media="print" rel="stylesheet" type="text/css" />
+        <link href="https://www.rideways.com/css/popover-20151112.1849.css" rel="stylesheet" type="text/css" />
+        <link href="https://www.rideways.com/css/jquery-ui-1.11.4.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://www.rideways.com/css/pikaday-20151112.1849.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        
+        <link href="https://www.rideways.com/css/intlTelInput-20151112.1849.css" rel="stylesheet" type="text/css" />
+        <script src="https://www.rideways.com/js/libraries/jquery-1.11.0.min.js" type="text/javascript"></script>
+        <script src="https://www.rideways.com/js/libraries/angular-1.3.12.min.js" type="text/javascript"></script>
+        <script src="https://www.rideways.com/js/libraries/angular-route.min.js" type="text/javascript"></script>
+        <script src="https://www.rideways.com/js/analytics/googleTagManager-20151112.1849.js" type="text/javascript"></script>
+        <script src="https://www.rideways.com/js/analytics/analyticsEventsService-20151112.1849.js" type="text/javascript"></script>
+        <script src="https://www.rideways.com/js/analytics/analyticsEventTypes-20151112.1849.js" type="text/javascript"></script>
+        <title>Details</title>
+
+        
+    <link href="/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
+    <link href="/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+    <link href="/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+    <link href="/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+    <link href="/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+    <link href="/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png" />
+    <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/manifest.json" rel="manifest" />
+    <link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#da532c" name="msapplication-TileColor" />
+    <meta content="/mstile-144x144.png" name="msapplication-TileImage" />
+    <meta content="#ffffff" name="theme-color" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+    
+    
+    </head>
+<body>
+
+
+
+    <header class="cf">
+        <div class="container">
+            <a class="logo" href="/"><img src="https://www.rideways.com/affiliates/1/logos/rideways.png" /></a>
+            <nav id="headerNav">
+                <a href="#" id="pull" ng-click="toggleHamburgerMenu()">Menu</a>
+                <ul>
+                    <li class="log-in has-popover" click-anywhere-but-here="hideShowMyAccountPopover()" ng-cloak=""><a href="#" ng-click="toggleShowMyAccountPopover()">My booking</a>
+                        <div class="popover booking-popover" ng-show="showMyAccountPopover">
+                            <div class="row">
+                                <div class="col-l" ng-show="false">
+                                    <h4>Account login</h4>
+
+                                    <p class="login-helper">Sign in to manage your account and bookings.</p>
+                                    <form>
+                                        <div class="form-row">
+                                            <input name="email_address" type="text" placeholder="Email" />
+                                        </div>
+                                        <div class="form-row">
+                                            <input autocomplete="off" name="password" type="password" placeholder="Password" />
+                                        </div>
+                                        <div class="form-row">
+                                            <button type="submit"></button>
+                                            <a href="#">Forgot your password?</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="booking-popover">
+                                    <h4>Booking information</h4>
+
+                                    <p class="login-helper">Quick access to your booking details.</p>
+                                    <form method="post">
+                                        <input class="emailAddressPlaceholder" type="hidden" value="Email" />
+                                        <input class="bookingReferencePlaceholder" type="hidden" value="Booking reference" />
+                                        
+                                        
+                                        <div class="form-row" ng-class="{'error' : emailAddressError}">
+                                            <input id="email_address" name="email_address" placeholder="{{emailAddressPlaceholder}}" type="text" />
+                                        </div>
+                                        <div class="form-row" ng-class="{'error' : bookingReferenceError}">
+                                            <input id="reservation_number" name="reservation_number" placeholder="{{bookingReferencePlaceholder}}" type="text" />
+                                        </div>
+                                        <div class="form-row">
+                                            <button ng-click="navigateToBookingScreen()" type="submit">Go</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="currency-btn has-popover" click-anywhere-but-here="hideShowCurrencyPopover()" ng-cloak=""><a href="#" ng-click="toggleShowCurrencyPopover()">{{selectedCurrency}}</a>
+                        <div class="popover" ng-show="showCurrencyPopover">
+                            <h4>Top currencies</h4>
+                            <ul class="popover-selection">
+                                <li class="active" ng-repeat="(key, value) in topCurrencies"><a href="/?currency={{key}}"><span class="currency">{{key}}</span>&nbsp;{{value}}</a></li>
+                            </ul>
+                            <h4>All currencies</h4>
+                            <ul class="popover-selection">
+                                <li class="active" ng-repeat="(key, value) in currencies"><a href="/?currency={{key}}"><span class="currency">{{key}}</span>&nbsp;{{value}}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <input id="customerCurrency" type="hidden" value="GBP" />
+                    <li class="language-btn has-popover" click-anywhere-but-here="hideShowLanguagesPopover()" ng-cloak="" ng-hide="true"><a href="#" ng-click="toggleShowLanguagePopover()">{{selectedLanguage}}</a>
+                        <div class="popover" ng-show="showLanguagePopover">
+                            <h4>Suggested Languages</h4>
+                            <ul class="popover-selection">
+                                <li><a href="#" ng-click="selectCountry('en-gb')"><span class="flag flag-en"></span> English</a></li>
+                            </ul>
+                            <h4>All Languages</h4>
+                            <ul class="popover-selection">
+                                <li class="active" ng-repeat="(key, value) in languages"><a href="#" ng-click="selectCountry(key)"><span class="flag flag-{{getFlagClass(key)}}"></span>&nbsp;{{value}}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <input id="customerLanguage" type="hidden" value="en-gb" />
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+        <section class="progress">
+            <input id="currentView" type="hidden" value="details" />
+            <div class="container">
+
+                <ul id="progressBarApp" ng-controller="ProgressBarController">
+
+                    <li id="search">
+                        <em>
+                            <a href="/?existingSearch=true">SEARCH</a>
+                            
+                        </em>
+                    </li>
+                    <li id="results">
+                        <em>
+                            
+                            <a href="/results?searchRequestId=cafff11c-e391-4b79-a111-328ad02bcb67">OPTIONS</a>
+                            
+                        </em>
+                    </li>
+                    <li id="details">
+                        <em>
+                            
+                            DETAILS
+                        </em>
+                    </li>
+                    <li id="payment">
+                        <em>PAYMENT</em>
+                    </li>
+                </ul>
+            </div>
+            <script src="//d2pxu588757m2x.cloudfront.net/js/progressBar-20151112.1849.js" type="text/javascript"></script>
+        </section>
+        
+       
+    
+<section class="wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-l">
+                <div class="summary">
+               
+    <a class="change-search-details" href="">Change</a>
+    <h2>Booking Summary</h2>
+    
+    <hr />
+    <p class="journey-type">
+        Journey type:<br />
+        <span>
+            One-way
+        </span>
+        
+    </p><hr />
+    <p class="pickup-loc">
+        Pick-up location:<br />
+        <span class="pickup-location-display">
+            <input id="pickupLocationText" type="hidden" value="Manchester Airport, Manchester M90 1QX, United Kingdom, M90 1QX" />
+            Manchester Airport, Manchester M90 1QX, United Kingdom, M90 1QX
+        </span>
+    </p><hr />
+    <p class="dest">
+        Destination:<br />
+        <span>
+            Manchester Piccadilly Station, Manchester M60 7RA, United Kingdom, M60 7RA
+        </span>
+    </p>
+    <hr />
+    <p class="date">
+        Pick-up date:<br />
+        <span>
+            Sun 15 Nov 15 12:00
+        </span>
+    </p>
+   
+    <hr />
+ 
+    <div>
+        <p>
+            <span>
+                Volkswagen Passat or similar
+                &nbsp;<a href="#">Change</a>
+            </span></p>
+        <img class="car-image" src="https://www.rideways.com/images/cars/volkswagen-passat.jpg" />
+
+        <div class="price">
+            Total:
+            &nbsp;
+            <span>
+                &pound;
+                37.50
+            </span>
+            <ul>
+                <li>Taxes, Fees &amp; Gratuity included</li>
+                <li>Meet &amp; Greet included</li>
+            </ul>
+        </div>
+    </div>
+    
+
+                </div>
+            </div>
+            
+            
+            <div class="col-r">
+                <form id="booking_form" method="post" name="booking_form">
+                    <div class="details passengerSection">
+
+
+                        <div class="details-title">Passenger Details</div>
+                        <div class="form-row">
+                            <label>Title</label>
+                            <select id="title" name="title">
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Dr">Dr</option>
+                                <option value="Prof">Prof</option>
+                            </select>
+                            
+                        </div>
+                        <div class="form-row">
+                            <label>First name</label>
+                            <input maxlength="50" required="" type="text" id="firstname" name="firstname" value="" />
+
+                        </div>
+                        <div class="form-row">
+                            <label>Last name</label>
+                            <input maxlength="50" required="" type="text" id="lastname" name="lastname" value="" />
+                            
+
+                        </div>
+                        <div class="form-row">
+                            <label>Email address</label>
+                            <input maxlength="50" required="" type="email" id="emailaddress" name="emailaddress" value="" />
+
+                        </div>
+                        <div class="form-row">
+                            <label>Mobile number</label>
+
+                            <input auto-placeholder="false" class="intl-tel-input__form-field" id="contactNumber" maxlength="15" name="contactNumber" required="" type="tel" default-country="GB" value="" />
+
+                            <div class="flight-msg">You are required to have a working mobile phone at the time of pick-up.</div>
+                            
+                        </div>
+                      </div>   
+                
+                    
+                    <div class="details rideSection">
+                        <div class="details-title">Ride Details</div>
+                        
+                        
+                        <div class="rideInfo">
+                            <div class="ridePickup">1 Manchester Square, Marylebone</div>
+                            <div class="rideArrow"><img src="arrow.png"></div>
+                            <div class="rideDropoff">London Heathrow, London</div>
+                        </div>
+                        <div class="pickupInfo">Pick Up: 3rd September'15 at 3.3pm</div>
+                        
+                           <div class="form-row">
+                            <label>Do you have your Flight Number?</label>
+
+                            <input id="flightNoInputSelected" type="hidden" value="" />
+
+                            <div class="yes-label">
+                            <label class="yes">Yes</label>
+                            <input id="flightNoKnown" required="" style="width:auto" type="radio" value="true" name="flightNoInputSelected" />
+                            </div>
+
+                            <div class="no-label">
+                            <label class="no">No</label>
+                            <input id="flightNoNotKnown" required="" style="width:auto" type="radio" value="false" name="flightNoInputSelected" />
+                            </div>
+
+                               <script type="application/javascript">
+                                $('#flightNoKnown').click(function() {
+                                    $('#flightNumberdiv').show();
+                                });
+                                     $('#flightNoNotKnown').click(function() {
+                                    $('#flightNumberdiv').hide();
+                                });
+                                                                  
+                                $('#flightNoNotKnown').click(function() {
+                                    $('#NotFlightInfo').show();
+                                });
+                
+                               </script>
+                               
+                        <div id="flightNumberdiv" style="display:none">
+                            <input id="flightNumber" type="hidden" value="" />
+                            <div>
+                                <label></label>
+                                <input maxlength="10" placeholder="e.g. FR8167" required="" type="text" id="flightNumber" name="flightNumber" value="" />
+                            </div>
+                        </div>
+                            
+                            <div id="NotFlightInfo" style="display:none">
+                                <div ng-switch-when="false">
+                                    <div class="flight-msg">Don&#39;t worry, you can still continue with your booking.</div>
+                                    <div class="flight-msg">You will have a 45 min complimentary driver waiting time from your chosen pick-up time.</div>
+                                </div>
+                            </div>
+                        
+                        
+                        </div>
+                    
+                        
+                        
+                        <div class="form-row">
+                            <label>Meet &amp; greet message </label>
+                            <input maxlength="50" type="text" id="meetAndGreetMessage" name="meetAndGreetMessage" value="" />
+                        </div>
+                        
+                        <div class="form-row text-section">
+                            <label>
+                                Comments for your driver
+                                <p class="smallText">Please provide any further information that you feel will be useful to the driver.</p>
+                            </label>
+                            <textarea maxlength="255" placeholder="e.g. child seat required, will have 2 sets of golf clubs" id="commentsForTheDriver" name="commentsForTheDriver"></textarea>
+                        </div>
+                        
+                        
+                        
+                        <div class="rideInfo returnRide">
+                            <div class="ridePickup">London Heathrow, London </div>
+                            <div class="rideArrow"><img src="arrow.png"></div>
+                            <div class="rideDropoff">1 Manchester Square, Marylebone</div>
+                        </div>
+                        <div class="pickupInfo">Pick Up: 3rd September'15 at 3.3pm</div>
+     
+                        <div class="form-row">
+                            <label>Meet &amp; greet message </label>
+              
+                            <div class="sameInfo">
+                                <span class="small">Same as for the first trip</span>            
+                            <input id="meetGreetReturn" required="" style="width: auto;" type="checkbox" value="true" name="flightNoInputSelected" checked>
+                            </div>
+                            <label></label>
+                            <input id="meetGreetReturnText" style="display:none" maxlength="50" type="text" name="meetAndGreetMessage" value="" />
+                        </div>
+                        
+                          <script type="application/javascript">
+                                $('#meetGreetReturn').click(function() {
+                                    $('#meetGreetReturnText').slideToggle();
+                                });
+                                  
+                               </script>
+                        
+                        <div class="form-row text-section">
+                            <label>
+                                Comments for your driver
+                                <p class="smallText">Please provide any further information that you feel will be useful to the driver</p>
+                            </label>
+                            <div class="sameInfo"> 
+                            <span class="small">Same as for the first trip</span>            
+                            <input id="commentsReturn" required="" style="width: auto;" type="checkbox" value="true" name="commentsInputSelected" checked>
+                            </div> 
+                            <label></label>
+                           
+                            <textarea id="commentsReturnText"  style="display:none" maxlength="255" placeholder="e.g. child seat required, will have 2 sets of golf clubs" id="commentsForTheDriver" name="commentsForTheDriver"></textarea>
+                        </div>
+  
+                        
+                               <script type="application/javascript">
+                                $('#commentsReturn').click(function() {
+                                    $('#commentsReturnText').slideToggle();
+                                });
+                                  
+                               </script>
+                        
+        <div style="clear:both"></div>
+                        
+
+                     
+                        <hr>
+                        
+                     <div class="form-row radio">
+                            <label class="emails-subscribe">I&#39;d like to receive emails with special offers</label>
+                            <input type="checkbox" id="keepMeInformed1" name="keepMeInformed" value="true" /><input type="hidden" name="_keepMeInformed" value="on" />
+                        </div>
+                        <input class="detailsSubmit" type="submit" value="GO TO BOOK" />
+                    </div>
+                        
+                        
+                        
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <div>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/libraries/newrelic-20151112.1849.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/libraries/jquery-ui.min.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/libraries/angular-sanitize.min.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/libraries/ui-bootstrap-0.12.0.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/datepicker/moment-locales.min.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/datepicker/pikaday.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/datepicker/pikaday-angular.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/searchFormValidation-20151112.1849.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/searchForm-20151112.1849.js" type="text/javascript"></script>
+                <script src="//d2pxu588757m2x.cloudfront.net/js/header-20151112.1849.js" type="text/javascript"></script>
+
+            </div>
+        
+<script src="//d2pxu588757m2x.cloudfront.net/js/libraries/intlTelInput/intlTelInput.min-20151112.1849.js" type="text/javascript"></script>
+<script src="//d2pxu588757m2x.cloudfront.net/js/libraries/intlTelInput/utils-20151112.1849.js" type="text/javascript"></script>
+<script src="//d2pxu588757m2x.cloudfront.net/js/libraries/intlTelInput/international-phone-number.min-20151112.1849.js" type="text/javascript"></script>
+<script src="//d2pxu588757m2x.cloudfront.net/js/bookingdetails-20151112.1849.js" type="text/javascript"></script>
+
+
+        <footer class="footer" id="footerDiv">
+            <section class="container">
+                <div class="row">
+                    <div class="col-l">
+                        <p>© 2015 TravelJigsaw Ltd trading as Rideways</p>
+                        <p>Your Reference ID is: <span>20151112.1849</span>/<span>C00436</span></p>
+                    </div>
+                    <div class="col-r">
+                        <ul>
+                            <li><h4>Help & Information</h4></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/info/about.html">About us</a></li>
+                            <li><a href="https://support.rideways.com">Frequently asked questions</a></li>
+                            <li><a href="https://support.rideways.com/hc/en-us/requests/new">Contact us</a></li>
+                            <li><a href="/info/terms-and-conditions.html">Terms and conditions</a></li>
+                            <li><a href="/info/privacy.html">Privacy policy</a></li>
+                            <li><a href="/info/affiliate-program.html">Affiliate programme</a></li>
+                            <li><a href="/info/transport-service-providers.html">Partner programme</a></li>
+
+                        </ul>
+                        <ul>
+                            <li><h4>Popular Airport Transfers</h4></li>
+                            <li><a href="/en-gb/airport-transfers/gb/airport-heathrow-airport">Heathrow Airport Transfers</a></li>
+                            <li><a href="/en-gb/airport-transfers/gb/airport-gatwick-airport">Gatwick Airport Transfers</a></li>
+                            <li><a href="/en-gb/airport-transfers/gb/airport-manchester-airport">Manchester Airport Transfers</a></li>
+                            <li><a href="/en-gb/airport-transfers/gb/airport-birmingham-airport">Birmingham Airport Transfers</a></li>
+                            <li><a href="/en-gb/airport-transfers/gb/airport-liverpool-airport">Liverpool Airport Transfers</a></li>
+                        </ul>
+                        <ul>
+                            <li><h4>Popular Services</h4></li>
+                            <li><a href="/en-gb/minibus-hire">Minibus Hire</a></li>
+                            <li><a href="/en-gb/chauffeur-service">Chauffeur Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="priceline-logos">
+                <div class="container">
+                    <ul>
+                        <li>Rideways is part of the Priceline Group, the world leader in online travel &amp; related services</li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><img alt="booking.com" src="//d2pxu588757m2x.cloudfront.net/images/logos/rc-bookingcom-logo.png" /></li>
+                        <li><img alt="priceline.com" src="//d2pxu588757m2x.cloudfront.net/images/logos/rc-priceline-logo.png" /></li>
+                        <li><img alt="kayak.com" src="//d2pxu588757m2x.cloudfront.net/images/logos/rc-kayak-logo.png" /></li>
+                        <li><img alt="agoda.com" src="//d2pxu588757m2x.cloudfront.net/images/logos/rc-agodacom-logo.png" /></li>
+                        <li><img alt="rentalcars.com" src="//d2pxu588757m2x.cloudfront.net/images/logos/rc-logo.png" /></li>
+                        <li><img alt="opentable.com" src="//d2pxu588757m2x.cloudfront.net/images/logos/rc-opentable-logo.png" /></li>
+                    </ul>
+                </div>
+                <div id="cookies-policy" ng-cloak="" ng-show="!cookieConsentGiven">
+                    <div class="content">
+                        <span class="cookie_disclaimer">We use cookies to ensure that we give you the best experience on our website. If you continue using this site, we'll assume that you are happy to receive all cookies. You can find detailed information about how we use your information in our&nbsp;<a href="/info/privacy.html" target="_parent">Privacy Policy</a>.</span>
+                        <span id="accept-cookies" ng-click="setCookieConsentGiven()">Accept</span>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    
+
+</body></html>
